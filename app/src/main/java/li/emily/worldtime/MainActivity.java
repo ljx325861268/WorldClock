@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         clocks.add(beijing);
         parent.addView(beijingClock);
 
+
         WorldTime newyork = new WorldTime ("New York",R.drawable.newyork,"America/New_York");
         ClockViewHolder newyorkClock = new ClockViewHolder(this);
         newyorkClock.cityTextView.setText(newyork.getCityName());
