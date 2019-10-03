@@ -44,6 +44,30 @@ public class MainActivity extends AppCompatActivity {
         beijingClock.imageView.setImageResource(beijing.getImageName());
         clocks.add(beijing);
         parent.addView(beijingClock);
+
+        WorldTime newyork = new WorldTime ("New York",R.drawable.newyork,"America/New_York");
+        ClockViewHolder newyorkClock = new ClockViewHolder(this);
+        newyorkClock.cityTextView.setText(newyork.getCityName());
+        newyorkClock.timeTextView.setText(newyork.getTime());
+        newyorkClock.imageView.setImageResource(newyork.getImageName());
+        clocks.add(newyork);
+        parent.addView(newyorkClock);
+
+        WorldTime paris = new WorldTime("Paris",R.drawable.paris,"Europe/Paris");
+        ClockViewHolder parisClock = new ClockViewHolder(this);
+        parisClock.cityTextView.setText(paris.getCityName());
+        parisClock.timeTextView.setText(paris.getTime());
+        parisClock.imageView.setImageResource(paris.getImageName());
+        clocks.add(paris);
+        parent.addView(parisClock);
+
+        WorldTime tokyo = new WorldTime("Tokyo",R.drawable.tokyo,"Asia/Tokyo");
+        ClockViewHolder tokyoClock = new ClockViewHolder(this);
+        tokyoClock.cityTextView.setText(tokyo.getCityName());
+        tokyoClock.timeTextView.setText(tokyo.getTime());
+        tokyoClock.imageView.setImageResource(tokyo.getImageName());
+        clocks.add(tokyo);
+        parent.addView(tokyoClock);
     }
 
     public void updateTime(){
