@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:background="@drawable/gradient_orange"
             android:text="24H" />
 
@@ -43,6 +44,7 @@
             android:layout_weight="1"
             android:background="@drawable/gradient_orange"
             android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:text="12H" />
     </LinearLayout>
 

@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         parent.addView(sydneyClock);
 
-        WorldTime beijing = new WorldTime("Beijing", R.drawable.beijing, "Asia/Hong_Kong",format);
+        WorldTime beijing = new WorldTime("Bei Jing", R.drawable.beijing, "Asia/Hong_Kong",format);
         ClockViewHolder beijingClock = new ClockViewHolder(this);
         beijingClock.cityTextView.setText(beijing.getCityName());
         beijingClock.timeTextView.setText(beijing.getTime());
