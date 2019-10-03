@@ -10,13 +10,14 @@ import android.widget.LinearLayout;
 import li.emily.worldtime.R;
 import li.emily.worldtime.model.WorldTime;
 
-/*
+
 public class ClockAdapter extends ClockViewHolder{
     private Context context;
     private ArrayList<WorldTime> worldTimes;
     private WorldTime.TimeFormat format;
 
     public ClockAdapter(Context context, ArrayList<WorldTime> worldTimes){
+        super(context);
         this.worldTimes = worldTimes;
         this.context = context;
         this.format = WorldTime.TimeFormat.TWELVE;
@@ -35,4 +36,4 @@ public class ClockAdapter extends ClockViewHolder{
         return format;
     }
 
-}*/
+}

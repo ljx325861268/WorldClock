@@ -8,14 +8,20 @@ public class WorldTime {
     private String cityName;
     private int imageName;
     private Date time;
-    private final SimpleDateFormat DATE_FORMAT_24 = new SimpleDateFormat("HH:mm:ss");
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat();
+    public static final String DATE_FORMAT_12 = "h:mm:ss a";
+    public static final String DATE_FORMAT_24 = "HH:mm:ss";
+    public enum TimeFormat {
+        TWELVE, TWENTYFOUR
+    }
 
 
-    public WorldTime(String cityName, int imageName, String location) {
+    public WorldTime(String cityName, int imageName, String location, String format) {
         this.cityName = cityName;
         this.imageName = imageName;
         TimeZone timeZone = TimeZone.getTimeZone(location);
-        DATE_FORMAT_24.setTimeZone(timeZone);
+        dateFormat.setTimeZone(timeZone);
+        dateFormat.applyPattern(format);
         this.time = new Date();
     }
 
@@ -36,10 +42,14 @@ public class WorldTime {
     }
 
     public String getTime() {
-        return DATE_FORMAT_24.format(time);
+        return dateFormat.format(time);
     }
 
     public void updateTime() {
         this.time = new Date();
+    }
+
+    public void setDateFormat(String format){
+        dateFormat.applyPattern(format);
     }
 }
